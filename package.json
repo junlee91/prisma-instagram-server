@@ -14,7 +14,8 @@
     "graphql-yoga": "^1.17.4",
     "merge-graphql-schemas": "^1.5.8",
     "morgan": "^1.9.1",
-    "prisma": "1.26"
+    "prisma": "1.26",
+    "prisma-client-lib": "^1.29.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",
@@ -27,7 +28,9 @@
     "nodemon": "^1.18.10"
   },
   "scripts": {
-    "dev": "nodemon --exec babel-node src/server.js",
-    "deploy": "prisma deploy"
+    "deploy": "prisma deploy",
+    "generate": "prisma generate",
+    "prisma": "yarn run deploy && yarn run generate",
+    "dev": "nodemon --exec babel-node src/server.js"
   }
 }
