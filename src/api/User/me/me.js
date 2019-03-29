@@ -13,5 +13,11 @@ export default {
         posts
       };
     }
+  },
+  User: {
+    // "parent" tells which resolver has called this custom resolver
+    fullName: (parent, __, { request }) => {
+      return `${parent.firstName} ${parent.lastName}`;
+    }
   }
 };
