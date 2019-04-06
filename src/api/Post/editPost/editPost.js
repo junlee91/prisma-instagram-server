@@ -13,7 +13,7 @@ export default {
           return prisma.updatePost({ data: { caption, location }, where: { id } });
         }
         if (action === 'DELETE') {
-          return prisma.deletePost({ where: { id } });
+          return prisma.deletePost({ id });
         }
       }
 
