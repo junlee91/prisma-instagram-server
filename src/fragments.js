@@ -17,7 +17,7 @@ export const FILE_FRAGMENT = `
 `;
 
 export const FULL_POST_FRAGMENT = `
-    fragment PostParts on Post{
+    fragment PostParts on Post {
         id
         location
         caption
@@ -29,6 +29,15 @@ export const FULL_POST_FRAGMENT = `
         }
         user {
             ${USER_FRAGMENT}
+        }
+    }
+`;
+
+export const ROOM_FRAGMENT = `
+    fragment RoomParts on Room {
+        id
+        participants {
+            id
         }
     }
 `;
