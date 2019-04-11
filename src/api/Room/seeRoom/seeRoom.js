@@ -1,5 +1,4 @@
 import { prisma } from '../../../../generated/prisma-client';
-import { ROOM_FRAGMENT } from '../../../fragments';
 
 export default {
   Query: {
@@ -16,7 +15,7 @@ export default {
       if (!canSeeRoom) {
         throw Error('You are not in the room');
       }
-      return prisma.room({ id }).$fragment(ROOM_FRAGMENT);
+      return prisma.room({ id });
     }
   }
 };
