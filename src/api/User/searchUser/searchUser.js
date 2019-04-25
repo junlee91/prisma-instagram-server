@@ -5,9 +5,9 @@ export default {
     searchUser: async (_, args) => prisma.users({
       where: {
         OR: [
-          { username_contains: args.term },
-          { firstName_contains: args.term },
-          { lastName_contains: args.term }
+          { username_starts_with: args.term },
+          { firstName_starts_with: args.term },
+          { lastName_starts_with: args.term }
         ]
       }
     })
