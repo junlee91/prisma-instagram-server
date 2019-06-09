@@ -82,5 +82,4 @@ typings/
 .DS_Store
 
 generated
-prisma.yml
 build
